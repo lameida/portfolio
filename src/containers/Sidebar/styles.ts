@@ -9,17 +9,26 @@ export const Descricao = styled(P)`
 export const BotaoTema = styled.button`
   border-radius: 12px;
   padding: 8px;
-  color: #eeee;
+  color: ${(props) => props.theme.corDeFundo};
   font-size: 10px;
   font-weight: bold;
-  background-color: #282a35;
+  background-color: ${(props) => props.theme.corPrincipal};
   cursor: pointer;
-  display: flex;
-  align-items: center;
+  margin-left: 20px;
+
+  @media (max-width: 768px) {
+    margin-left: 110px;
+    margin-bottom: 16px;
+  }
 `
 
 export const SidebarContainer = styled.div`
   position: sticky;
   top: 80px;
   left: 0;
+
+  @media (max-width: 768 px) {
+    margin-bottom: 40px;
+    text-align: center;
+  }
 `
